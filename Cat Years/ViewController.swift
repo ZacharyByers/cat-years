@@ -10,6 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var textField: UITextField!
+  
+  @IBOutlet weak var output: UILabel!
+  
+  @IBAction func ageButton(_ sender: Any) {
+    if let age = Int(textField.text!) {
+      let catAge = String(age * 7)
+      output.text = "Your cat is \(catAge) in cat years."
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
