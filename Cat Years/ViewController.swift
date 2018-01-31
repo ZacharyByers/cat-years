@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  let CAT_MULTIPLIER = 7
 
   @IBOutlet weak var textField: UITextField!
   
@@ -16,8 +18,7 @@ class ViewController: UIViewController {
   
   @IBAction func ageButton(_ sender: Any) {
     if let age = Int(textField.text!) {
-      let catAge = String(age * 7)
-      output.text = "Your cat is \(catAge) in cat years."
+      output.text = "Your cat is \(age * CAT_MULTIPLIER) in cat years."
     }
   }
   
